@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleGravity="bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/main.imageview.placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/white"
+                android:scaleType="centerCrop"
+                android:tint="#11000000"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.9" />
+
+            <FrameLayout
+                android:id="@+id/main.framelayout.title"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.3">
+
+                <LinearLayout
+                    android:id="@+id/main.linearlayout.title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/shubham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Himanshu"
+                        android:textAllCaps="true"
+                        android:textColor="#5E5E5E"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/username_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="shubham1232019 . "
+                            android:textSize="16sp"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:id="@+id/followers_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Followers"
+                            android:textSize="16sp"
+                            android:textColor="#000"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main.appbar"
+        android:scrollbars="none"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/flips_likes_mag_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/flips_number_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Flips"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/likes_number_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Likes"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/magazines_number_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Magazines"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/profile_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main.toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_anchor="@id/main.framelayout.title"
+        app:title="">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_user_button"
+                android:padding="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings_work_tool"
+                android:padding="15dp"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_launcher_background"
+        app:finalHeight="@dimen/image_final_width"
+        app:finalYPosition="2dp"
+        app:layout_behavior=".AvatarImageBehavior"
+        app:layout_collapseMode="pin"
+        app:startHeight="2dp"
+        app:startToolbarPosition="2dp"
+        app:startXPosition="2dp" />
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="70dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_gravity="top"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:background="@drawable/green_circle_design"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--app:layout_collapseMode="pin">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="S"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="28sp" />-->
+    <!--</RelativeLayout>-->
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context=".MainActivity">-->
+
+
+    <!--<RelativeLayout--><!--android:id="@+id/profile_top_bar"--><!--android:layout_width="match_parent"--><!--android:layout_height="?attr/actionBarSize"--><!--android:background="@color/white">-->
+
+    <!--<ImageView--><!--android:id="@+id/settings_image_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentEnd="true"--><!--android:layout_alignParentRight="true"--><!--android:padding="15dp"--><!--android:src="@drawable/ic_settings_work_tool" />-->
+
+    <!--<ImageView--><!--android:id="@+id/add_user_image_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_toStartOf="@id/settings_image_view"--><!--android:layout_toLeftOf="@id/settings_image_view"--><!--android:padding="15dp"--><!--android:src="@drawable/ic_add_user_button" />--><!--</RelativeLayout>-->
+
+    <!--<LinearLayout--><!--android:id="@+id/collapsing_view"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/profile_top_bar"--><!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="70dp"--><!--android:layout_height="70dp"--><!--android:layout_marginLeft="15dp"--><!--android:layout_marginRight="15dp"--><!--android:background="@drawable/green_circle_design">-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:text="S"--><!--android:textColor="@color/white"--><!--android:textSize="28sp" />--><!--</RelativeLayout>-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="15dp"--><!--android:layout_marginTop="10dp"--><!--android:layout_marginRight="15dp"--><!--android:text="Shubham Infosif"--><!--android:textAllCaps="true"--><!--android:textColor="#000"--><!--android:textSize="26sp"--><!--android:textStyle="bold" />-->
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="15dp"--><!--android:layout_marginRight="15dp"--><!--android:orientation="horizontal">-->
+
+    <!--<TextView--><!--android:id="@+id/username_text_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="shubham1232019 . "--><!--android:textSize="16sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/followers_text_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="0 Followers"--><!--android:textSize="16sp" />-->
+
+
+    <!--</LinearLayout>--><!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:id="@+id/flips_likes_mag_view"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/collapsing_view"--><!--android:layout_marginLeft="5dp"--><!--android:layout_marginTop="15dp"--><!--android:layout_marginRight="5dp"--><!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="10dp"--><!--android:layout_marginRight="10dp"--><!--android:orientation="vertical">-->
+
+    <!--<TextView--><!--android:id="@+id/flips_number_text_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="24"--><!--android:textSize="16sp" />-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="3dp"--><!--android:text="Flips"--><!--android:textSize="14sp" />--><!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="10dp"--><!--android:layout_marginRight="10dp"--><!--android:orientation="vertical">-->
+
+    <!--<TextView--><!--android:id="@+id/likes_number_text_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="5"--><!--android:textSize="16sp" />-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="3dp"--><!--android:text="Likes"--><!--android:textSize="14sp" />--><!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="10dp"--><!--android:layout_marginRight="10dp"--><!--android:orientation="vertical">-->
+
+    <!--<TextView--><!--android:id="@+id/magazines_number_text_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="13"--><!--android:textSize="16sp" />-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="3dp"--><!--android:text="Magazines"--><!--android:textSize="14sp" />--><!--</LinearLayout>--><!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView--><!--android:id="@+id/profile_recycler_view"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/flips_likes_mag_view"--><!--android:layout_marginTop="15dp">-->
+
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <!--<android.support.design.widget.FloatingActionButton--><!--android:layout_width="50dp"--><!--android:layout_height="50dp"--><!--android:layout_alignParentEnd="true"--><!--android:layout_alignParentRight="true"--><!--android:layout_alignParentBottom="true"--><!--android:layout_margin="20dp"--><!--android:background="@drawable/green_circle_design" />-->
+
+
+    <!--</RelativeLayout>-->
